@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+body {
+    margin-bottom: 200px;
+}
+
 a, ul {
     list-style: none;
     text-decoration: none;
@@ -22,6 +26,9 @@ h1 {
     text-align: center;
     margin: 30px;
 }
+
+
+/*--------CSS FLEXBOX 1-------*/
 
 .header {
     background-color: #0c0101;
@@ -41,7 +48,7 @@ h1 {
     padding: 10px;
 }
 
-section {
+section.flex {
     display: flex;
     flex-wrap: wrap;
     max-width: 1000px;
@@ -53,4 +60,33 @@ section {
 div.imagens {
     flex: 1 1 200px;
     margin: 10px;
+}
+
+
+/*---------CSS GRID LAYOUT----------*/
+
+section.grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+div.imagens-grid1 {
+    margin: 10px;
+}
+
+div.imagens-grid2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    margin: 10px;
+}
+
+div.anuncio {
+    display: block;
+    margin: 10px;
+    grid-row: 2 / 5;
+    border: 2px solid tomato;
 }
